@@ -1,0 +1,241 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(111, 111, 168);
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+.cat-container{
+  min-height: 50vh;
+  width: 40%;
+ display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:transparent;
+}
+.cat{
+  min-height: 50vh;
+  width: 60%;
+ display: flex;
+ flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color:transparent;
+  cursor: pointer;
+  
+}
+.tail{
+  position: absolute;
+  min-height: 1rem;
+  width: 5rem;
+  background-color: black;
+  right: -4rem;
+  bottom: 0;
+  border-radius: 0 1rem 0.5rem 0;
+  cursor: pointer;
+
+}
+.paw1, .paw2{
+  min-height: 1rem;
+  width: 1.2rem;
+  background-color: black;
+  border-radius: 0 0 1rem 1rem;
+}
+.paw1{
+position: absolute;
+background-color: black;
+bottom:-0.8rem;
+
+
+}
+.paw2{
+  position: absolute;
+   right: 1rem;
+  bottom:-0.8rem;
+  
+  }
+.cat-body{
+  min-height:6.5rem;
+  width: 7.5rem;
+  position: relative;
+  margin-left: 2rem;
+  border-top-right-radius: 3rem;
+  background-color:black;
+  cursor: pointer;
+}
+.head-container{
+    min-height: 10rem;
+    width: 10rem;
+    position: relative;
+    cursor: pointer;
+}
+.ear1{
+    position: absolute;
+    top: 1.7rem;
+    left: -0.7rem;
+    border-top: 0;
+    border-bottom: 4rem;
+    border-left:1.5rem;
+    border-right:1.5rem;
+    border-style:solid;
+  border-bottom-color:black;
+    border-left-color:transparent;
+    border-right-color:transparent;
+  transform: rotate(-28deg);
+}
+
+
+.ear2{
+    position: absolute;
+    top: 1.7rem;
+    right: -0.7rem;
+    border-top:0;
+    border-bottom: 4rem;
+    border-left:1.5rem;
+    border-right:1.5rem;
+    border-style:solid;
+  border-bottom-color:black;
+  border-left-color:transparent;
+  border-right-color:transparent;
+  transform: rotate(28deg);
+}
+.inner-ear1{
+    position: absolute;
+    top: 2rem;
+    left: -0.3rem;
+    border-top: 0;
+    border-bottom: 3.5rem;
+    border-left:0.7rem;
+    border-right:0.7rem;
+    border-style:solid;
+    border-bottom-color:rgb(189, 149, 156);
+    border-left-color:transparent;
+    border-right-color:transparent;
+    transform: rotate(-17.1deg);
+}
+.inner-ear2{
+    position: absolute;
+    top: 2rem;
+    right: -0.3rem;
+    border-top:0;
+    border-bottom: 3.5rem;
+    border-left:0.7rem;
+    border-right:0.7rem;
+    border-style:solid;
+  border-bottom-color:rgb(189, 149, 156) ;
+  border-left-color:transparent;
+  border-right-color:transparent;
+  transform: rotate(17.1deg);
+}
+
+.head{
+    min-height: 6rem;
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border-radius: 2rem;
+    padding: 1.5rem 1rem 0 1rem ;
+    }
+   
+    #rightEye{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 2rem;
+      width: 2rem;
+      border-radius: 1rem;
+      background-color: white;
+      position: relative;
+      overflow: hidden;
+
+    }
+    #leftEye{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 2rem;
+      width: 2rem;
+      border-radius: 1rem;
+      background-color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .right-eye-lid{
+      position: absolute;
+      top:-3rem;
+      z-index: 3;
+      min-height: 3rem;
+      width: 2rem;
+      transition: 1s ease-in-out;
+      background-color:black;
+    }
+    .left-eye-lid{
+      position: absolute;
+      top:-3rem;
+      z-index: 3;
+      min-height: 3rem;
+      width: 2rem;
+      transition: 1s ease-in-out;
+      background-color:black;
+    }
+    
+    .eye-lid-closed{
+      position: absolute;
+      z-index: 3;
+      background-color:black;
+      transform: translateY(100%);
+      transition: 1s ease-in-out;
+    }
+    .eyeBall1{
+      z-index: 2;
+      min-height: 1.5rem;
+      width: 1.5rem;
+      border-radius: 1.1rem;
+      background-color:black;
+      
+    }
+    .eyeBall2{
+      z-index: 2;
+      min-height: 1.5rem;
+      width: 1.5rem;
+      border-radius: 1.1rem;
+      background-color: black;
+    }
+    .nose{
+      border-width:0.5rem;
+      border-style: solid;
+      position: absolute;
+      bottom: 1.5rem;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      border-top-color: pink;
+      border-bottom-color: transparent;
+    }
+
+    @media screen and (max-width: 900px){
+     .head{
+       min-height: 6.5rem;
+     } 
+     
+     .cat-container{
+       background-color: transparent;
+       width: 90%;
+     }
+ 
+    }
+
